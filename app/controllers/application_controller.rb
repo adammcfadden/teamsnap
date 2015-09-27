@@ -10,6 +10,10 @@ class ApplicationController < ActionController::Base
     @current_user ||= session[:current_user]
   end
 
+  def auth_token
+    @auth_token ||= session[:auth_token]
+  end
+
   def set_current_user(user)
     session[:current_user] = user
   end
