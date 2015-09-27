@@ -1,28 +1,17 @@
-== README
+### TeamSnap API Exploration
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is created to explore the TeamSnap API. The TeamSnap API is a Collection+JSON type API. 
 
-Things you may want to cover:
+This app will use OAuth2 to authenticate that the user has access to their information via the TeamSnap API. Once authenticated it will show team info, member info, and other stats related to the user/team. 
 
-* Ruby version
+The purpose of this app is to learn the TeamSnap API, and to learn how to navigate a Collection+JSON API. The functionality of the app is much more well suited for a Single Page app and a front-end framework such as Ember or Angular would be a better choice to carry this type of app forward. It is built in Rails to see what connecting to the TeamSnap API through Rails could look like.
 
-* System dependencies
+#### Author
+Adam McFadden
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Copyright
+2015 Adam McFadden
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+####License
+MIT
