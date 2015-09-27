@@ -1,3 +1,13 @@
 @import "materialize/components/color";
 $primary-color: color("blue", "darken-1") !default;
 @import "materialize";
+
+footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: $primary-color;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
