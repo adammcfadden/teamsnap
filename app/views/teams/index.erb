@@ -19,14 +19,18 @@
       <p><%=@team.fetch("division_name") %></p>
     </div>
   </div>
-</div>
-<div class="row center">
-  <div class="col offset-s1 s10">
-    <ul class="collection with-header">
-      <li class="collection-header"><h4>Members</h4></li>
-      <% @members.each do |member| %>
-        <li class="collection-item"> <%= member.fetch("first_name") %> <%= member.fetch("last_name") %> </li>
-      <% end %>
-    </ul>
+  <div class="col s12">
+    <a href="<%=@team.fetch("league_url") %>">
+    <div class="card red darken-2 white-text hoverable-link">
+      <p>Visit the Justice League Homepage</p>
+    </div>
+    </a>
+  </div>
+  <div class="col s12">
+    <%= link_to members_path do %>
+    <div class="card red darken-2 white-text hoverable-link">
+      <p>View Our Roster</p>
+    </div>
+    <% end %>
   </div>
 </div>

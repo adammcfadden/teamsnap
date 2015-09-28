@@ -13,5 +13,11 @@ footer{
 }
 
 body{
-  margin-bottom: 50px;
+  margin-bottom: 70px;
+}
+
+.hoverable-link:hover{
+  background-color: $primary-color !important;
+  transform: scale(1.1);
+  transition: 1s;
 }

@@ -10,11 +10,19 @@ class ApplicationController < ActionController::Base
     @current_user ||= session[:current_user]
   end
 
+  def current_team
+    @current_team ||= session[:current_team]
+  end
+
   def auth_token
     @auth_token ||= session[:auth_token]
   end
 
   def set_current_user(user)
     session[:current_user] = user
+  end
+
+  def set_current_team(team)
+    session[:current_team] = team
   end
 end

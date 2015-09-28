@@ -1,0 +1,14 @@
+<div class="row center">
+  <div class="col offset-s1 s10">
+    <ul class="collection with-header">
+      <li class="collection-header"><h4>Members</h4></li>
+      <% @members.each do |member| %>
+        <%= link_to member_path(member.fetch("id"), :member => member), :class => "collection-item" do %>
+          <span class="left"><%= member.fetch("position") %></span>
+          <span><%= member.fetch("first_name") %> <%= member.fetch("last_name") %></span>
+          <span class="right"> <%= member.fetch("jersey_number") %> </span>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>

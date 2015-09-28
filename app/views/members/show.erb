@@ -1,0 +1,17 @@
+<div class="row center">
+  <div class="col offset-s1 s10">
+    <ul class="collection with-header">
+      <li class="collection-header"><h4 class="heading center"> <%= @member.fetch("first_name") %> <%= @member.fetch("last_name") %> </h4></li>
+      <% @member.each do |item| %>
+        <li class="collection-item center">
+          <span class="left"><%= item.first.titleize %></span>
+          &nbsp
+          <span class="right"><%= item.last %></span>
+        </li>
+      <% end %>
+    </ul>
+    <p>
+      *All attribute names have been titleized. Convert to snake_case to use them in the TeamSnap API.
+    </p>
+  </div>
+</div>
