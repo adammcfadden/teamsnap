@@ -1,9 +1,9 @@
 class SessionsController < ApplicationController
   def new
-    if session[:auth_token].nil?
-      redirect_to %Q(https://auth.teamsnap.com/oauth/authorize?client_id=#{ENV["CLIENT_ID"]}&redirect_uri=http://localhost:3000/login&response_type=code)
-    else
+    if user_logged_in?
       redirect_to users_path
+    else
+      redirect_to %Q(https://auth.teamsnap.com/oauth/authorize?client_id=#{ENV["CLIENT_ID"]}&redirect_uri=http://localhost:3000/login&response_type=code)
     end
   end
 
@@ -13,6 +13,11 @@ class SessionsController < ApplicationController
     get_and_set_user
     get_and_set_team
     redirect_to users_path
+  end
+
+  def destroy_current_session
+    reset_session
+    redirect_to root_path
   end
 
   private

@@ -2,7 +2,11 @@
 
   <div class="footer-copyright">
     <div class="center container">
-      <span class="white-text flow-text"><%= current_user.fetch("first_name") %> <%= current_user.fetch("last_name") %></span>
+      <% if user_logged_in? %>
+        <span class="white-text flow-text"><%= current_user.fetch("first_name") %> <%= current_user.fetch("last_name") %></span>
+      <% else %>
+        <span class="white-text flow-text">TeamSnap</span>
+      <% end %>
     </div>
   </div>
 </footer>

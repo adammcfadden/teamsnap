@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   resources "members" #only index
 
   get "login", to: 'sessions#set_current_session', via: :all
+  get "logout", to: 'sessions#destroy_current_session', via: :all
 
 
-  root 'sessions#new'
+  root 'users#index'
 
 end
