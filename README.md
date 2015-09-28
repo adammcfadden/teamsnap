@@ -46,6 +46,10 @@ CLIENT_SECRET: 9845y9nf9854fjsgb573fyn87o4bfhf4ub5fhd8d47m4334
 ```
 You can get your CLIENT_ID and CLIENT_SECRET at the [TeamSnap Auth](https://auth.teamsnap.com) site.
 
+On the TeamSnap Auth Page:
+* name the application whatever you want.
+* set the redirect URI to: `http://localhost:3000/login`
+
 Start the Rails server:
 ```
 rails s
@@ -53,7 +57,7 @@ rails s
 
 Navigate to [http://localhost:3000/](http://localhost:3000/)
 
-This will redirect you too TeamSnap's Auth page where you will need to sign-in. After that you will be redirected back and be able to explore the app!
+This will redirect you too TeamSnap's Auth page where you will need to sign-in. Once you sign-in click authorize. After that you will be redirected back and be able to explore the app!
 
 ---
 #### Author
