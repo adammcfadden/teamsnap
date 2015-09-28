@@ -1,10 +1,29 @@
+  <div class="row center">
+    <% if user_logged_in? %>
+      <h2 class="center">Hello <%= @user.fetch("first_name") %> <%= @user.fetch("last_name") %></h2>
 
-<% if user_logged_in? %>
-
-  <h1 class="center">Hello <%= @user.fetch("first_name") %> <%= @user.fetch("last_name") %></h1>
-
-  <h3 class="center"><%= link_to "View Team Info", teams_path%></h3>
-
-<% else %>
-  <%= link_to "Please Log In", new_session_path %>
-<% end %>
+      <div class="col s12">
+        <%= link_to teams_path do %>
+        <div class="card red darken-2 white-text hoverable-link">
+          <h5 class="center">View Team Info</h5>
+        </div>
+        <% end %>
+      </div>
+      <div class="col s12">
+        <%= link_to members_path do %>
+        <div class="card red darken-2 white-text hoverable-link">
+          <h5 class="center">View Team Roster</h5>
+        </div>
+        <% end %>
+      </div>
+    <% else %>
+      <h2>Welcome to TeamSnap</h2>
+      <div class="col s12">
+        <%= link_to new_session_path do %>
+        <div class="card red darken-2 white-text hoverable-link">
+          <p>Please Log In</p>
+        </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>

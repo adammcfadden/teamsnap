@@ -12,12 +12,12 @@ footer{
   padding-bottom: 10px;
 }
 
-body{
-  margin-bottom: 70px;
-}
-
 .hoverable-link:hover{
   background-color: $primary-color !important;
   transform: scale(1.1);
   transition: 1s;
+}
+
+body{
+  margin-bottom: 70px;
 }

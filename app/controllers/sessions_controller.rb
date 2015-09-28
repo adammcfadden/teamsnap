@@ -13,11 +13,13 @@ class SessionsController < ApplicationController
     get_and_set_user
     get_and_set_team
     redirect_to users_path
+    flash[:notice] = "You have been Logged In"
   end
 
   def destroy_current_session
     reset_session
     redirect_to root_path
+    flash[:alert] = "You have been Logged Out"
   end
 
   private

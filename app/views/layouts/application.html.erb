@@ -9,12 +9,28 @@
 <body>
 
 <%= render "layouts/navbar" %>
-<div class="container">
+  <div class="container">
+    <div class="flash" onclick="$(this).slideUp('slow')">
+      <div id="flash-notice">
+        <% if flash[:notice] %>
+          <div class="center card alert blue" role="alert">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+      </div>
+      <div id="flash-alert">
+        <% if flash[:alert] %>
+          <div class="center card alert red" role="alert">
+            <%= flash[:alert] %>
+          </div>
+        <% end %>
+      </div>
+    </div>
 
+    <%= yield %>
 
-  <%= yield %>
-</div>
-<%= render "layouts/footer" %>
+  </div>
 
+  <%= render "layouts/footer" %>
 </body>
 </html>
